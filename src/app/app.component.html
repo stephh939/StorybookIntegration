@@ -1,13 +1,19 @@
-<!doctype html>
-<html>
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="output.css" rel="stylesheet">
-</head>
-<body>
-<h1 class="text-3xl font-bold underline">
-  Hello world!
-</h1>
-</body>
-</html>
+
+
+
+  <div class="text-gray-600">
+    <header class="text-4xl text-gray-700 font-bold uppercase p-6 boarder-b boarder-gray-100">Hello world</header>
+    <h1>Welcome</h1>
+    <div>
+      <p>Random number: {{randomNumber}}</p>
+      <br>
+      <p>Hip!</p>
+      <ng-template [ngIf]="randomNumber >= 0 && randomNumber <= 5">
+        <p>Hip!</p>
+      </ng-template>
+      <p>Hooray!</p>
+    </div>
+
+
+
+  </div>
