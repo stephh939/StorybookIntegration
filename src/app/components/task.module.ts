@@ -4,8 +4,8 @@ import { CommonModule } from '@angular/common';
 import { NgxsModule } from '@ngxs/store';
 
 import {TaskComponent} from "./task/task.component";
-import {TaskListComponent} from "./task-list/task-list.component"
-import { TasksState } from  '../state/task.state';
+import {TaskListComponent} from './task-list/task-list.component';
+import { TasksState } from '../state/task.state';
 import {PureTaskListComponent} from './pure-task-list/pure-task-list.component';
 
 @NgModule({

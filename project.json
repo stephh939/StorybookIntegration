@@ -109,6 +109,7 @@
         ],
         "port": 6006,
         "styles": [
+          "src/styles.css"
         ]
       }
     },

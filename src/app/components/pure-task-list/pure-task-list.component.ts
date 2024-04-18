@@ -42,4 +42,5 @@ export class PureTaskListComponent {
       t => t.state === 'TASK_INBOX' || t.state === 'TASK_PINNED'
     );
   }
+
 }

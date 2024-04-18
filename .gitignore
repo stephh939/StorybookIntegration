@@ -44,3 +44,5 @@ Thumbs.db
 *storybook.log
 
 .nx/cache
+
+storybook-static

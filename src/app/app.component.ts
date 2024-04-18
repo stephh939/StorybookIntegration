@@ -12,12 +12,11 @@ export class AppComponent implements OnInit{
   randomNumber = 0;
 
   ngOnInit(): void {
-    this.getRandomNumber();
+    // this.getRandomNumber();
   }
 
   getRandomNumber(){
     this.randomNumber = Math.floor(Math.random() * Math.floor(15));
-    console.log("random number: " + this.randomNumber);
   }
 
 
