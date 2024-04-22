@@ -9,7 +9,7 @@ import {PureTaskListComponent} from './pure-task-list.component';
 
 import { TaskComponent } from "../task/task.component";
 
-import * as TaskStories from '../task/task.stories';
+import * as TaskStories from '../task/task.component.stories';
 
 const meta: Meta<PureTaskListComponent> = {
   component: PureTaskListComponent,

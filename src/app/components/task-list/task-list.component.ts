@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-task-list',
-  templateUrl: './task-list.component.html',
+  templateUrl: './task-list.component.html'
 })
 export class TaskListComponent {
   tasks$?: Observable<any>;

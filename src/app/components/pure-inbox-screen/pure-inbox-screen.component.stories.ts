@@ -44,15 +44,17 @@ export const Error: Story = {
 export const WithInteractions: Story = {
   play: async ({ canvasElement }) => {
     const canvas = within(canvasElement);
-    // let secondCheckBox = canvas;
-    console.log(canvas.getByLabelText('archiveTask-1'));
+    let secondCheckBox = canvas.getByLabelText('archiveTask-1');
 
     // Simulates pinning the first task
     await fireEvent.click(canvas.getByLabelText('pinTask-1'));
     // Simulates pinning the third task
     await fireEvent.click(canvas.getByLabelText('pinTask-3'));
     // Simulates archiving the second task
-    // await userEvent.click(canvas.getByLabelText('archiveTask-2'));
+    // The click/input/change functions does not work for checkboxes
+    await fireEvent.change(secondCheckBox, {
+      target: {disabled: 'enabled'}
+    });
 
 
   },

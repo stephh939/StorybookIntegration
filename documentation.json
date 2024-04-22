@@ -1070,7 +1070,7 @@
         },
         {
             "name": "TaskListComponent",
-            "id": "component-TaskListComponent-f8b52070fc2ec67641c04dd40e6e94fc412d08b2e656edd0ca19e199a129d4e770302410c4923e91f037c1732cf22111c134f422c0b27a004ba2ae42a060ad8b",
+            "id": "component-TaskListComponent-36be0df116babc19683b46ff4624a07716313cbce19ef84b0c6fadb0a5f328d58a02bcee19a7813f79bf4a3cf57e08cd4a49dda0427fbb9759e86e02b7e2fcb2",
             "file": "src/app/components/task-list/task-list.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -1169,7 +1169,7 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component } from '@angular/core';\r\nimport { Store } from '@ngxs/store';\r\nimport { ArchiveTask, PinTask } from '../../state/task.state';\r\nimport { Observable } from 'rxjs';\r\n\r\n@Component({\r\n  selector: 'app-task-list',\r\n  templateUrl: './task-list.component.html',\r\n})\r\nexport class TaskListComponent {\r\n  tasks$?: Observable<any>;\r\n\r\n  constructor(private store: Store) {\r\n    this.tasks$ = store.select((state) => state.taskbox.tasks);\r\n  }\r\n\r\n  /**\r\n   * Component method to trigger the archiveTask event\r\n   */\r\n  archiveTask(id: string) {\r\n    console.log(\"archiveTask: \" + id);\r\n    this.store.dispatch(new ArchiveTask(id));\r\n  }\r\n\r\n  /**\r\n   * Component method to trigger the pinTask event\r\n   */\r\n  pinTask(id: string) {\r\n    console.log(\"pinTask: \" + id);\r\n    this.store.dispatch(new PinTask(id));\r\n  }\r\n}\r\n",
+            "sourceCode": "import { Component } from '@angular/core';\r\nimport { Store } from '@ngxs/store';\r\nimport { ArchiveTask, PinTask } from '../../state/task.state';\r\nimport { Observable } from 'rxjs';\r\n\r\n@Component({\r\n  selector: 'app-task-list',\r\n  templateUrl: './task-list.component.html'\r\n})\r\nexport class TaskListComponent {\r\n  tasks$?: Observable<any>;\r\n\r\n  constructor(private store: Store) {\r\n    this.tasks$ = store.select((state) => state.taskbox.tasks);\r\n  }\r\n\r\n  /**\r\n   * Component method to trigger the archiveTask event\r\n   */\r\n  archiveTask(id: string) {\r\n    console.log(\"archiveTask: \" + id);\r\n    this.store.dispatch(new ArchiveTask(id));\r\n  }\r\n\r\n  /**\r\n   * Component method to trigger the pinTask event\r\n   */\r\n  pinTask(id: string) {\r\n    console.log(\"pinTask: \" + id);\r\n    this.store.dispatch(new PinTask(id));\r\n  }\r\n}\r\n",
             "assetsDirs": [],
             "styleUrlsData": "",
             "stylesData": "",
