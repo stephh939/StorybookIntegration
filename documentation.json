@@ -1201,18 +1201,55 @@
             },
             "extends": [],
             "templateData": "<app-pure-task-list\r\n  [tasks]=\"tasks$ | async\"\r\n  (onArchiveTask)=\"archiveTask($event.toString())\"\r\n  (onPinTask)=\"pinTask($event.toString())\"\r\n\r\n></app-pure-task-list>\r\n\r\n\r\n\r\n"
+        },
+        {
+            "name": "TestComponentComponent",
+            "id": "component-TestComponentComponent-b8fd52a144bd27a94a76569663e055a8ba258d87c22b0b32426a6c6b94a0c836a166de3000bc4eef38470598ac357882986076936b0286080ebf3ed5b5ac1953",
+            "file": "src/app/components/test-component/test-component.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-test-component",
+            "styleUrls": [],
+            "styles": [],
+            "templateUrl": [
+                "./test-component.component.html"
+            ],
+            "viewProviders": [],
+            "hostDirectives": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "standalone": false,
+            "imports": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import {Component} from \"@angular/core\";\r\n\r\n@Component({\r\n  selector: 'app-test-component',\r\n  templateUrl: './test-component.component.html',\r\n})\r\n\r\nexport class TestComponentComponent {\r\n}\r\n",
+            "assetsDirs": [],
+            "styleUrlsData": "",
+            "stylesData": "",
+            "extends": [],
+            "templateData": "<h1>Hello world this is a test</h1>\r\n"
         }
     ],
     "modules": [
         {
             "name": "AppModule",
-            "id": "module-AppModule-8e4dee8ed8571642e1430212b0a8ee01f8db8d5a71e4740e905f50f3dedd7fc42b70561a6431e7c38494e894e0b78d85d229ac8b527d46d6d7485b1185e13259",
+            "id": "module-AppModule-83b79ad38b11d0c7d90b3a795e36e154fbc202d048b6901b8d3aeeba0777b74a2d7dbd65b4f6c3ddda771fa9975929591dc1303a377d7a4485a89d1deb87e850",
             "description": "",
             "deprecationMessage": "",
             "deprecated": false,
             "file": "src/app/app.module.ts",
             "methods": [],
-            "sourceCode": "\r\nimport { BrowserModule } from '@angular/platform-browser';\r\nimport { NgModule } from '@angular/core';\r\nimport { TaskModule } from './components/task.module';\r\nimport { NgxsModule } from '@ngxs/store';\r\nimport { NgxsReduxDevtoolsPluginModule } from '@ngxs/devtools-plugin';\r\nimport { NgxsLoggerPluginModule } from '@ngxs/logger-plugin';\r\n\r\nimport { environment } from '../environments/environment';\r\nimport { AppComponent } from './app.component';\r\n\r\nimport {InboxScreenComponent} from \"./components/inbox-screen/inbox-screen.component\";\r\nimport {PureInboxScreenComponent} from './components/pure-inbox-screen/pure-inbox-screen.component';\r\n\r\n@NgModule({\r\n  declarations: [AppComponent, InboxScreenComponent, PureInboxScreenComponent],\r\n    imports: [\r\n        BrowserModule,\r\n        TaskModule,\r\n        NgxsModule.forRoot([], {developmentMode: !environment.production,}),\r\n        NgxsReduxDevtoolsPluginModule.forRoot(),\r\n        NgxsLoggerPluginModule.forRoot({disabled: environment.production,}),\r\n    ],\r\n  providers: [],\r\n  bootstrap: [AppComponent],\r\n})\r\nexport class AppModule {}\r\n",
+            "sourceCode": "\r\nimport { BrowserModule } from '@angular/platform-browser';\r\nimport { NgModule } from '@angular/core';\r\nimport { TaskModule } from './components/task.module';\r\nimport { NgxsModule } from '@ngxs/store';\r\nimport { NgxsReduxDevtoolsPluginModule } from '@ngxs/devtools-plugin';\r\nimport { NgxsLoggerPluginModule } from '@ngxs/logger-plugin';\r\n\r\nimport { environment } from '../environments/environment';\r\nimport { AppComponent } from './app.component';\r\n\r\nimport {InboxScreenComponent} from \"./components/inbox-screen/inbox-screen.component\";\r\nimport {PureInboxScreenComponent} from './components/pure-inbox-screen/pure-inbox-screen.component';\r\n\r\n\r\n@NgModule({\r\n  declarations: [AppComponent, InboxScreenComponent, PureInboxScreenComponent],\r\n    imports: [\r\n        BrowserModule,\r\n        TaskModule,\r\n        NgxsModule.forRoot([], {developmentMode: !environment.production,}),\r\n        NgxsReduxDevtoolsPluginModule.forRoot(),\r\n        NgxsLoggerPluginModule.forRoot({disabled: environment.production,}),\r\n    ],\r\n  providers: [],\r\n  bootstrap: [AppComponent],\r\n})\r\nexport class AppModule {}\r\n",
             "children": [
                 {
                     "type": "providers",
@@ -1296,13 +1333,13 @@
         },
         {
             "name": "TaskModule",
-            "id": "module-TaskModule-dc79d6e3fb5d7ed53baaf2dae6c124ce4c083e583965412c77159addbc5382eae54180f2486b06695b331a214b2b355f6a5e67cb151d242cbaa498d982c54e8d",
+            "id": "module-TaskModule-309c6ca182d28908710139c22c3aca1239f6c218febf7ad18f4a7937413e6d91624b79799dedf527ddcdfbcad3ae1190af3bb72e8d96d82f3da45d5cc9dea873",
             "description": "",
             "deprecationMessage": "",
             "deprecated": false,
             "file": "src/app/components/task.module.ts",
             "methods": [],
-            "sourceCode": "\r\nimport { NgModule } from '@angular/core';\r\nimport { CommonModule } from '@angular/common';\r\nimport { NgxsModule } from '@ngxs/store';\r\n\r\nimport {TaskComponent} from \"./task/task.component\";\r\nimport {TaskListComponent} from './task-list/task-list.component';\r\nimport { TasksState } from '../state/task.state';\r\nimport {PureTaskListComponent} from './pure-task-list/pure-task-list.component';\r\n\r\n@NgModule({\r\n  imports: [CommonModule, NgxsModule.forFeature([TasksState])],\r\n  exports: [TaskComponent, TaskListComponent],\r\n  declarations: [TaskComponent, TaskListComponent, PureTaskListComponent],\r\n  providers: [],\r\n})\r\nexport class TaskModule {}\r\n",
+            "sourceCode": "\r\nimport { NgModule } from '@angular/core';\r\nimport { CommonModule } from '@angular/common';\r\nimport { NgxsModule } from '@ngxs/store';\r\n\r\nimport {TaskComponent} from \"./task/task.component\";\r\nimport {TaskListComponent} from './task-list/task-list.component';\r\nimport { TasksState } from '../state/task.state';\r\nimport {PureTaskListComponent} from './pure-task-list/pure-task-list.component';\r\nimport {TestComponentComponent} from \"./test-component/test-component.component\";\r\n\r\n@NgModule({\r\n  imports: [CommonModule, NgxsModule.forFeature([TasksState])],\r\n  exports: [TaskComponent, TaskListComponent],\r\n  declarations: [TaskComponent, TaskListComponent, PureTaskListComponent, TestComponentComponent],\r\n  providers: [],\r\n})\r\nexport class TaskModule {}\r\n",
             "children": [
                 {
                     "type": "providers",
@@ -1319,6 +1356,9 @@
                         },
                         {
                             "name": "TaskListComponent"
+                        },
+                        {
+                            "name": "TestComponentComponent"
                         }
                     ]
                 },
@@ -1404,7 +1444,7 @@
     },
     "routes": [],
     "coverage": {
-        "count": 9,
+        "count": 8,
         "status": "low",
         "files": [
             {
@@ -1460,6 +1500,15 @@
                 "coveragePercent": 50,
                 "coverageCount": "3/6",
                 "status": "medium"
+            },
+            {
+                "filePath": "src/app/components/test-component/test-component.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "TestComponentComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
             },
             {
                 "filePath": "src/app/models/task.model.ts",

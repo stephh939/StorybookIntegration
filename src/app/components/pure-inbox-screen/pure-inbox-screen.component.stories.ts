@@ -50,6 +50,7 @@ export const WithInteractions: Story = {
     await fireEvent.click(canvas.getByLabelText('pinTask-1'));
     // Simulates pinning the third task
     await fireEvent.click(canvas.getByLabelText('pinTask-3'));
+
     // Simulates archiving the second task
     // The click/input/change functions does not work for checkboxes
     await fireEvent.change(secondCheckBox, {
